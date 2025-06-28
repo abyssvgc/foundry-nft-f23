@@ -22,10 +22,7 @@ contract BasicNftTest is Test {
         string memory expectedName = "Dogie";
         string memory actualName = basicNft.name();
         //assertEq(actualName, expectedName);
-        assert(
-            keccak256(abi.encodePacked(expectedName)) ==
-                keccak256(abi.encodePacked(actualName))
-        );
+        assert(keccak256(abi.encodePacked(expectedName)) == keccak256(abi.encodePacked(actualName)));
     }
 
     function testCanMintAndHaveABalance() public {
